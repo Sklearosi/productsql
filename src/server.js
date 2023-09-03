@@ -12,7 +12,7 @@ async function init() {
 
       function serverStart() {
         app.get('/', (request, response) => {
-            return response.status(200).json(console.log('works'))
+            return response.status(200).json((`<h1>works</h1>`))
         })
         app.listen(3000)
       }
