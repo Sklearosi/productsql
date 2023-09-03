@@ -29,9 +29,9 @@ async function init() {
                 const  resultQuery = await pool.query("INSERT INTO TABLE products(title, price) VALUES($1,$2)", 
             {title, price})
                 const row = resultQuery.rows[0]
-                return response.status(201).json(row)
+                return res.status(201).json(row)
             } catch (error) {
-                return response.status(401).json(error)
+                return res.status(401).json(error)
             }
             
         })
